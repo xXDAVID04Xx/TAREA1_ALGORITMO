@@ -1,0 +1,1539 @@
+// Ejercicio 1: Calculadora de vuelto
+//Pedir costo y dinero recibido. Calcular y mostrar el vuelto o advertir si no alcanza.
+//costo leer 
+
+// dinero leer 
+// vuelto calcular 
+// dinerorecibido es mayor que costo restamos (calculamos)
+Funcion  ejercicio1
+	
+	Definir costo, dinerorecibido, vuelto Como Real
+	
+	Escribir "ingrese el costo del producto"
+	leer costo
+	
+	Escribir "ingrese el dinerorecibido"
+	leer dinerorecibido
+	
+	Si dinerorecibido >= costo  Entonces
+		vuelto <- dinerorecibido - costo
+		Escribir "su  vuelto es de  $ " vuelto " gracias por su compra "
+	SiNo
+		Escribir "dinero insuficiente"
+	Fin Si
+	
+	
+FinFuncion
+
+
+
+
+// Ejercicio 2: Conversor de kilogramos a libras y viceversa
+//Convertir entre kilogramos y libras. Mostrar el resultado.
+// kilogramos "leer"
+// libras "leer"
+// eleccion "leer"
+// kilogramos a libras =0 * 2.20462
+// libras a kilogramos =0 / 2.20462
+ Funcion  ejercicio2
+	
+	Definir eleccion  Como entero
+	
+	Definir kilogramos, libras Como real
+	
+	Escribir "conversor universal"
+	Escribir "1. convertir kilogramos a libras"
+	Escribir "2. convertir libras a kilogramos"
+	
+	Escribir "selecciones una opcion 1 o 2 "
+	leer eleccion 
+	
+	Si eleccion = 1 Entonces
+		Escribir "ingrese kilogramos"
+		leer kilogramos
+		
+		libras <- kilogramos * 2.20462
+		Escribir kilogramos  " kilogramos equivale a " libras " libras "
+	SiNo
+		Si eleccion = 2 Entonces
+			Escribir "ingrese libras"
+			leer libras
+			
+			kilogramos <- libras / 2.20462
+			Escribir libras  " libras  equivale a " kilogramos " kilogramos "
+			
+		SiNo
+			Escribir "eleccion incorrecta"
+		Fin Si
+		
+		
+		
+		
+		
+		
+	Fin Si
+	
+	
+FinFuncion
+
+
+
+
+
+//Ejercicio 3: Calculadora de descuentos
+//Aplicar 0%, 5% o 10% de descuento según el monto de compra.
+
+// montoCompra (leer)
+// descuento calcular 
+Funcion  ejercicio3
+	
+	Definir montoCompra, descuento, totalPagar Como Real
+	
+	Escribir "Ingrese el monto de la compra:"
+	Leer montoCompra
+	
+	// 
+	Si montoCompra < 50 Entonces
+		descuento <- 0
+	Sino
+		Si montoCompra >= 50 Y montoCompra < 100 Entonces
+			descuento <- 0.05
+		Sino
+			descuento <- 0.10
+		FinSi
+	FinSi
+	
+	// Calcular total con descuento
+	totalPagar <- montoCompra - (montoCompra * descuento)
+	
+	Escribir "Descuento aplicado: ", descuento * 100, "%"
+	Escribir "Total a pagar con descuento: $", totalPagar
+	
+FinFuncion
+
+
+
+
+// Ejercicio 4: Cálculo del IVA (12%)
+//Pedir un precio sin IVA y calcular el precio con IVA incluido del 15% con un descuento del
+//30%
+
+// precioSinIVA Leer 
+// precioConIVA calcular 
+// iva 0.15
+// descuento 0.30
+//precioFinal = 0
+
+Funcion  ejercicio4
+	
+	Definir precioSinIVA, iva, precioConIVA, descuento, precioFinal Como Real
+	
+	Escribir "Ingrese el precio sin IVA:"
+	Leer precioSinIVA
+	
+	// Calcular IVA del 15%
+	iva <- precioSinIVA * 0.15
+	precioConIVA <- precioSinIVA + iva
+	
+	// Aplicar descuento del 30%
+	descuento <- precioConIVA * 0.30
+	precioFinal <- precioConIVA - descuento
+	
+	// Mostrar resultados
+	Escribir "IVA aplicado: $", iva
+	Escribir "Descuento aplicado: $", descuento
+	Escribir "Precio final a pagar: $", precioFinal
+	
+	
+	
+FinFuncion
+
+
+	//Pedir dos precios. Mostrar cuál es mayor, menor o si son iguales.
+	
+	// producto1 Leer 
+	// producto2 Leer 
+	// mostrar una ventana indicando cual es mayor o menor 
+	
+	Funcion  ejercicio5
+		Definir producto1, producto2 Como Entero
+		
+		escribir "ingrese precio producto1"
+		leer producto1
+		
+		Escribir "ingrese precio producto2"
+		leer producto2
+		
+		Si producto1 > producto2 Entonces
+			Escribir " producto1 es mayor que producto2 "
+		SiNo
+			Si  producto2 < producto1 Entonces
+				Escribir " producto1 es mayor que producto2 "
+			SiNo
+				Escribir " ambos productos tienen el mismo valor "
+			Fin Si
+		Fin Si
+
+FinFuncion
+
+
+
+
+
+//Ejercicio 6: Clasificador de edad del cliente
+//Pedir edad. Indicar si es niño (0-12), joven (13-17), adulto (18-64), adulto mayor (65+).
+
+// edad leer
+// crear una secuencia
+
+Funcion  ejercicio6
+	Definir edad Como Entero
+	Escribir "ingrese su edad porfavor"
+	Leer edad
+	
+	Si edad >= 0 y edad <= 13 Entonces
+		Escribir edad " años " " eres menor de edad"
+	SiNo
+		Si edad >= 13 y edad <= 17  Entonces 
+			Escribir edad " años " " eres joven aun " 
+			
+		SiNo
+			Si edad >= 18 y edad <= 64  Entonces
+				Escribir edad " años " " ya eres adulto"
+			SiNo
+				Si edad >= 64 Entonces
+					Escribir  edad " años "  " ya eres adulto muuuuy mayor "
+					
+					
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+	
+FinFuncion
+
+
+
+Funcion  ejercicio7
+
+Definir numero, multi10 Como Entero
+
+Escribir " ingrese numero "
+Leer numero
+
+Si numero mod 2 = 0  Entonces
+	Escribir " su numero es par"
+SiNo
+	Escribir " su numero es impar" 
+Fin Si
+
+multi10 = numero - (Trunc(numero / 10) * 10)
+
+Si multi10 = 0 Entonces
+	Escribir " y es multiplo de 10"
+SiNo
+	Escribir  " y no es multiplo de 10 "
+Fin Si
+
+
+
+
+FinFuncion
+
+
+
+
+
+Funcion  ejercicio8
+	
+	definir puntuacion Como Entero
+	
+	Escribir "ingrese puntuacion"
+	leer puntuacion
+	
+	Si puntuacion >= 1 y puntuacion <= 5 Entonces
+		Escribir  puntuacion " su puntuacion es mala"
+		
+		
+	SiNo
+		Si  puntuacion >= 6 y puntuacion <= 7 Entonces
+			Escribir puntuacion " su puntuacion es regular "
+		SiNo
+			Si  puntuacion >= 8 y puntuacion <= 10 Entonces
+				Escribir puntuacion " su puntuacion es buena"
+				
+			Fin Si
+		Fin Si
+	Fin Si
+FinFuncion
+
+
+//Ejercicio 9: Verificador de múltiplo de 3 o múltiplo de 9 o múltiplo de 12
+//Pedir un número.
+
+// numero leer
+
+Funcion  ejercicio9
+	
+	Definir numero Como Entero
+	
+	Escribir "ingrese numero"
+	leer numero
+	
+	Si numero mod 3 = 0 Entonces
+		Escribir " es multiplo de 3 " 
+	Fin Si
+	Si numero mod 9 = 0 Entonces
+		Escribir " es multiplo de 9 " 
+	Fin Si
+	Si numero mod 12 = 0 Entonces
+		Escribir " es multiplo de 12 " 
+		
+	Fin Si
+	
+	Si numero MOD 3 <> 0 Y numero MOD 9 <> 0 Y numero MOD 12 <> 0 Entonces
+		Escribir "No es múltiplo de 3, 9 ni 12."
+	Fin Si
+	
+FinFuncion
+
+
+
+
+//Ejercicio 10: Calculadora de propina
+//Pedir valor de la cuenta. Calcular propina del 10% o 15% según nivel de servicio.
+
+// valorcuenta Leer 
+// propina =0 
+// nivel de servicio 5 estrellas 
+// valor a pagar 
+Funcion  ejercicio10
+	
+	Definir valorcuenta, propina, totalapagar Como Real
+	Definir servicio Como Entero
+	propina1 = 0.10
+	propina2 = 0.15
+	
+	Escribir "ingrese valor de la cuenta"
+	leer valorcuenta
+	
+	Escribir " califique el servicio de 1 a 5 estrellas"
+	leer servicio
+	
+	Si servicio <= 3  Entonces
+		Escribir servicio " mal servicio  "
+		propina <- valorcuenta * propina1
+	SiNo
+		Si servicio  <= 5 Entonces
+			Escribir servicio " exelente servicio"
+			propina = valorcuenta * propina2 
+		SiNo
+			Escribir " nivel de servicio no valido"
+		Fin Si
+	Fin Si
+	totalapagar = valorcuenta + propina 
+	
+	Escribir " propina aplicada " propina
+	Escribir " total a pagar  "  totalapagar
+	
+	
+	
+FinFuncion
+
+
+
+
+// Ejercicio 11: Clasificador de monto de compra
+// Categorizar la compra: "baja" (<$10), "media" ($10-30), "alta" (>$30).
+
+// monto ller
+// 
+Funcion  ejercicio11
+	
+	definir monto Como Entero
+	
+	Escribir " ingrese monto"
+	Leer monto
+	
+	Si monto <= 10 Entonces
+		Escribir " la compra es baja "
+	SiNo
+		Si monto >= 10 y monto <= 30  Entonces
+			Escribir " la compra tiene un nivel medio"
+			
+		SiNo
+			Si monto >= 30 Entonces
+				Escribir " la compra es altaaaaa"
+				
+				
+			Fin Si
+		Fin Si
+	Fin Si
+	
+	
+	
+FinFuncion
+
+
+
+// Ejercicio 12: Determinar si un número es positivo deberá presentar el doble del
+//número, Si es negativo lo convierte a positivo y lo presenta . Si es cero presenta el
+//número es neutro
+//Pedir un número y clasificar su signo.
+
+// numero Leer 
+// convertir negativo a positivo
+
+Funcion  ejercicio12
+	
+	Definir resultado, numero Como Entero
+	
+	Escribir " ingrese numero"
+	leer numero
+	
+	Si numero > 0 Entonces
+		resultado = numero * 2
+		Escribir  numero " es positivo y su doble es " resultado
+		
+	SiNo
+		Si numero < 0 Entonces
+			resultado = abs(numero)
+			Escribir numero " es negativo lo cual se lo convierte a "  resultado " positivo" 
+		SiNo
+			Escribir " su numero es neutro"
+		Fin Si
+	Fin Si
+	
+	
+FinFuncion
+
+
+// Ejercicio 13: Verificador de acceso por edad y dinero
+//Permitir entrar a la tienda si tiene más de 18 años y al menos $1.
+
+// edad Leer 
+// dinero Leer 
+// 
+Funcion  ejercicio13
+	
+	Definir edad, dinero Como Entero
+	
+	Escribir "ingrese edad "
+	Leer edad
+	
+	Escribir "ingrese dinero"
+	leer dinero
+	
+	Si edad > 18 y dinero >= 1  Entonces
+		Escribir " usted puede ingresar"
+	SiNo
+		Escribir " no puede ingresar"
+	Fin Si
+	
+	
+	
+FinFuncion
+
+
+
+// Ejercicio 14: Descuento por edad y monto
+// Aplicar descuento especial solo si el cliente es mayor de 60 y compra más de $50. Si no lo es
+// aplica el iva del 15% con un descuento solo del 5%
+// edad Leer 
+// monto Leer 
+//  iva = 0.15
+//  descuento especial 0.50
+// descuento2 0.05
+// total a pagar 0
+// descuento 0
+Funcion  ejercicio14
+	
+	definir edad Como Entero
+	definir total, monto, descuento, iva, descespecial Como Real
+	descespecial = 0.40
+	iva = 0.15
+	descuento2 = 0.05
+	descuento = 0
+	
+	Escribir "ingrese edad "
+	Leer edad
+	
+	Escribir "ingrese monto"
+	Leer monto
+	
+	Si edad >= 60 y monto > 50 Entonces
+		descespecial = monto * descespecial
+		total = monto - descespecial
+		Escribir "si aplica al descuento especial "
+		Escribir " descuento especial aplicado " descespecial 
+		Escribir " total a pagar con descuento aplicado " total 
+	SiNo
+		Escribir " no tiene descespecial"
+		iva = monto * iva
+		monto = monto + iva
+		descuento = monto * descuento2
+		total = monto - descuento
+		Escribir " iva aplicado " iva 
+		Escribir  " descuento aplicado " descuento
+		Escribir "total a pagar" total
+	Fin Si
+	
+FinFuncion
+
+
+
+// Ejercicio 16: Categorizador de día de la semana
+//Pedir número del 1 al 7 y mostrar qué día es. Validar entrada.
+// ingresar numero del 1 al 7 Leer 
+//  verificar que el numero este en el rango definido
+// mostrar ventana con el numero del dia que eligio
+// numero Leer 
+
+Funcion  ejercicio16 
+	
+	Definir num Como Entero
+	
+	Escribir "Ingrese un número del 1 al 7:"
+	Leer num
+	
+	Si num < 1 O num > 7 Entonces
+		Escribir "Número incorrecto"
+	Sino
+		Si num = 1 Entonces
+			Escribir num, " es el día lunes"
+		SiNo
+			Si num = 2 Entonces
+				Escribir num, " es el día martes"
+			SiNo
+				Si num = 3 Entonces
+					Escribir num, " es el día miércoles"
+				SiNo
+					Si num = 4 Entonces
+						Escribir num, " es el día jueves"
+					SiNo
+						Si num = 5 Entonces
+							Escribir num, " es el día viernes"
+						SiNo
+							Si num = 6 Entonces
+								Escribir num, " es el día sábado"
+							SiNo
+								Escribir num, " es el día domingo"
+							FinSi
+						FinSi
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+
+FinFuncion
+
+
+//Ejercicio 17: Clasificador de producto por precio unitario
+//Pedir precio unitario y decir si es "económico", "regular" o "caro".
+
+// precio unitario leer 
+//definir un rango el cual se me ajuste al rango de precios ( economico) ( regular)
+// ( caro)
+// mostrar una ventana con el precio elegido detallando si es ( economico) ( regular)
+// ( caro)
+Funcion  ejercicio17
+	
+	Definir  precio Como entero 
+	
+	Escribir " ingrese precio"
+	leer precio
+	
+	Si precio < 50 Entonces
+		Escribir " el producto es economico" precio 
+	SiNo
+		Si precio <=100  Entonces
+			Escribir " el producto es regular " precio
+		SiNo
+			Escribir " el producto es caro " precio
+		Fin Si
+	Fin Si
+	
+FinFuncion
+
+
+
+
+//Ejercicio 18: Determinador de bisiesto (año)
+//Pedir un año. Indicar si es bisiesto usando regla condicional (mod 4 y mod 100, mod 400).
+
+// año Leer 
+// calcular año vicisesto con formula 
+// mostrar una ventana indicando si es año viciesto o no 
+Funcion  ejercicio18
+	
+	Definir año Como Entero
+	Escribir "ingrese año"
+	
+	Leer año
+	Si(año mod 4 = 0 Y año mod 100 <> 0) O (año mod 400 = 0)Entonces
+		Escribir  " si es un año bisiesto "
+		
+		
+	SiNo
+		Escribir " no es un año bisiesto" 
+	Fin Si
+	
+	
+	
+FinFuncion
+
+
+
+//Ejercicio 19: Conversor de horas a minutos y segundos
+//	Pedir horas y calcular su equivalencia en minutos y segundos.
+// horas Leer 
+// minutos = 0
+// segundos =0 
+Funcion  ejercicio19 
+	Definir hora, minutos, segundos Como Real
+	Escribir " conversor de horas a minutos y segundos"
+	
+	Escribir " ingrese la hora"
+	leer hora
+	
+	minutos = hora * 60
+	segundos = hora * 3600
+	
+	Escribir hora " horas equivale a " minutos " minutos"
+	Escribir  hora " horas equivale a " segundos " segundos"
+	
+	
+	
+	
+FinFuncion
+
+
+
+// Ejercicio 20: Verificador de triple de un número
+//	Pedir dos números. Verificar si el segundo es el triple del primero.
+// num1 Leer 
+// num2 Leer 
+// calculamos el num1* 3 = 0
+
+Funcion  ejercicio20
+	definir num1, num2 como entero 
+	
+	Escribir " ingrese el primer numero"
+	Leer  num1
+	
+	Escribir " ingrese el segundo numero "
+	Leer num2
+	
+	Si num2 = num1 * 3  Entonces
+		Escribir " el segundo numero es el triple del primero"
+		
+	SiNo
+		Escribir  " el segundo numero no es triple del primero"
+	Fin Si
+	
+	
+FinFuncion
+
+
+
+// Ejercicio 21: Determinar riesgo por síntomas múltiples para el efecto tienes
+// Escribir "¿Tiene fiebre? (SI/NO):"
+//Escribir "¿Tiene dificultad para respirar? (SI/NO):"
+//Escribir "¿Tiene dolor en el pecho? (SI/NO):"
+// Si los tres síntomas son "SI" muestre un mensaje "Alto riesgo: Derivar a emergencia"
+// caso contrario muestre "Riesgo bajo o medio"
+
+// Determinar riesgo por síntomas múltiples para el efecto tienes
+// tiene fiebre (si/no)
+// tiene dificultad para respirar (si/no)
+//tiene dolor de pecho (si/no)
+// como cadena
+Funcion  ejercicio21
+	
+	definir fiebre, respirar, pecho como cadena
+	
+	Escribir " ¿tiene fiebre ?(si/no)"
+	leer fiebre
+	
+	Escribir " ¿tiene dificultad para respirar? (si/no) "
+	Leer respirar
+	
+	Escribir " ¿ tiene dolor de pecho? (si/no)"
+	Leer pecho
+	
+	Si fiebre = ("si") y respirar = ("si") y pecho = ("si") Entonces
+		Escribir " Altoo riesgo derivar a urgencias"
+	SiNo
+		Si fiebre = ("no") y respirar = ("si") y pecho = ("si") Entonces
+			Escribir "riesgo medio "
+		SiNo
+			Si fiebre = ("si") y respirar = ("no") y pecho = ("no") Entonces
+				Escribir " riesgo bajo "
+			SiNo
+				Si fiebre = ("no") y respirar = ("no") y pecho = ("si") Entonces
+					Escribir " riesgo bajo"
+				SiNo
+					Si fiebre = ("no") y respirar = ("no") y pecho = ("no") Entonces
+						Escribir " usted esta sano "
+					SiNo
+						Si fiebre = ("no") y respirar = ("si") y pecho = ("no") Entonces
+							Escribir " riesgo bajo"
+						SiNo
+							Si fiebre = ("si") y respirar = ("si") y pecho = ("no") Entonces
+								Escribir "riesgo medio "
+							SiNo
+								Si fiebre = ("si") y respirar = ("no") y pecho = ("si")  Entonces
+									Escribir "riesgo medio "
+									
+									
+								Fin Si
+							Fin Si
+						Fin Si
+					Fin Si
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+	
+	
+	
+	
+FinFuncion
+
+
+// 22. La tienda desea implementar una función básica en su sistema para identificar el estado
+// de salud de los clientes que se toman la presión arterial en su tienda. Para ello, solicita un
+// pequeño algoritmo que reciba la presión sistólica como entrada y muestre una clasificación
+// médica básica según la siguiente tabla:
+// Presión Sistólica Clasificación
+//Menor a 90 Presión baja
+//Entre 90 y 120 Presión normal
+//Entre 121 y 139 Prehipertensión
+//140 o más Hipertensión
+
+
+// presion Leer 
+// establecer un rango para determinar cuando la presion sea alta baja medio o regular
+// mostrar una ventana indicando el nivel de presion
+Funcion  ejercicio22
+	
+	Definir presion Como Entero
+	
+	Escribir " Ingrese su presion sistolica"
+	Leer presion
+	
+	Si presion < 90 Entonces
+		Escribir " su presion es baja"
+	SiNo
+		Si presion >= 90 y  presion <= 120  Entonces
+			Escribir " Su presion es normal "
+			
+		SiNo
+			Si presion >= 121 y  presion <= 139 Entonces
+				Escribir " Tiene prehipertension"
+				
+			SiNo
+				Si presion >= 140 Entonces
+					Escribir " Usted tiene hipertension"
+					
+					
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+	
+	
+
+	
+	
+FinFuncion
+
+
+// Ejercicio 23: Mostrar saludo personalizado
+// Ingresar nombre y mostrar saludo: ¡Hola, [nombre]!
+// nombre (leer1)
+
+
+Funcion  ejercicio23
+	Definir nombre Como Caracter
+	
+	Escribir " ingrese su nombre"
+	Leer nombre
+	
+	Escribir " hola " nombre " bienvenido al club "
+	
+FinFuncion
+
+
+// Ejercicio 24: Detectar si el carácter ingresado es una vocal
+//Ingresar una letra. Verificar si es a, e, i, o, u.
+
+// letra (leer)
+// convertir letra a minusculas
+// mostrar una ventana indicando si la lestra ingresada es una vocal o no 
+Funcion  ejercicio24
+	Definir letra Como Caracter
+	
+	Escribir " ingrese una letra"
+	Leer letra
+	
+	letra = Minusculas(letra)
+	
+	Si letra = ("a") o letra = ("e") o letra = (i) o letra = ("o") o letra = ("u")  Entonces
+		Escribir letra " es una vocal "
+	SiNo
+		Escribir " no es una vocal"
+	Fin Si
+	
+FinFuncion
+
+
+
+
+// Ejercicio 25: Detectar si el carácter ingresado es una consonante
+//Ingresar una letra. Verificar si es una consonante
+
+// letra Leer 
+// convertir letra a minuscula 
+// 
+Funcion  ejercicio25
+	
+	definir letra Como Caracter
+	
+	Escribir " ingrese letra"
+	Leer letra
+	
+	letra =  Minusculas(letra)
+	
+	
+	Si letra <> ("a") y  letra <> ("e") y letra <> ("i") y letra <> ("o") y letra <> ("u") Entonces
+		Escribir letra " es una consonante"
+		
+	SiNo
+		Escribir letra " es una vocal "
+	Fin Si
+	
+	
+FinFuncion
+
+
+
+//Ejercicio 26: Comparar si dos nombres ingresados son iguales
+//Pedir dos nombres y verificar si son iguales (texto exacto).
+// nombre1 Leer 
+// nombre2 Leer 
+// compara si los dos nombres son iguales
+// mostrar un mensaje con el resultado 
+Funcion  ejercicio26
+	Definir nombre1, nombre2 Como Caracter
+	
+	Escribir " ingrese primer nombre"
+	leer nombre1
+	
+	Escribir " ingrese segundo nombre "
+	Leer nombre2
+	
+	
+	Si nombre1 = nombre2 Entonces
+		Escribir " los nombres son iguales"
+		
+	SiNo
+		Escribir " los nombres no son iguales "
+	Fin Si
+	
+	
+FinFuncion
+
+
+
+
+        //Ejercicio 27: Verificar si una letra es mayúscula o minúscula
+		//Ingresar una letra. Comparar con su versión en mayúscula/minúscula.
+		// letra Leer 
+		// verificar si la letra es mayuscula o minuscula
+		// mostrar una ventana con el resultado 
+		
+		Funcion  ejercicio27
+			Definir letra Como Caracter
+			
+			Escribir " ingrese una letra"
+			Leer letra
+			
+			
+			Si letra = Mayusculas(letra) Entonces
+				Escribir letra " es Mayusculas"
+			SiNo
+				Escribir letra " es Minusculas"
+			Fin Si
+			
+			
+FinFuncion
+
+
+
+// Ejercicio 28: Mostrar nombre completo del cliente
+// Pedir nombre y apellido por separado. Mostrar nombre completo.
+//nombre leer
+//  apellido Leer 
+// nombres completos ,sumar nombre+ apellido
+// mostrar nombres completos
+
+Funcion  ejercicio28
+	Definir nombre, apellido, nombrecompletos Como Caracter
+	
+	Escribir " ingrese su nombre"
+	leer nombre
+	
+	Escribir " ingrese su apellido"
+	leer apellido
+	
+	nombrecompletos = nombre +  " "  + apellido
+	
+	Escribir " Bienvenido " nombrecompletos
+	
+	
+	
+	
+	
+	
+FinFuncion
+
+
+
+// Ejercicio 29: Verificar si una palabra es corta o larga
+// Pedir una palabra. Si tiene más de 6 caracteres, decir "larga"; si no, "corta".
+// palabra Leer 
+// longitud calcular 
+// mostrar una ventana indicando cuantos caracteres tiene la palabra ingresada
+Funcion  ejercicio29
+	
+	Definir palabra Como cadena
+	
+	Escribir " ingrese una palabra "
+	leer palabra
+	
+	Si Longitud(palabra)  > 6 Entonces
+		Escribir " la palabra es larga"
+	SiNo
+		Escribir " la palabra es corta "
+		
+	Fin Si
+	
+	
+	
+	
+	
+FinFuncion
+
+
+
+// Ejercicio 30: Contadar los caracteres y convertir a mayúsculas cualquier frase (sin
+//recorrer)
+//Pedir frase.
+// frase Leer 
+// longitud calcular
+// convertir a mayuscula 
+// mostrar en una ventana cuantos caracteres tiene la frase
+
+Funcion  ejercicio30
+	
+	Definir frase, palabramayu como caracter
+	definir cantidadcaracter como entero
+	
+	Escribir  " ingrese una frase"
+	leer frase
+	
+	frase = Mayusculas(frase)
+	
+	cantidadcaracter = Longitud(frase)
+	
+	Escribir frase " tiene " cantidadcaracter " caracteres"
+	
+	
+FinFuncion
+
+Algoritmo menu_ejercicios
+	
+	Definir opc Como entero
+	Definir nombre Como Caracter
+	definir saludo Como Caracter
+	Definir letra Como Caracter
+	
+	Repetir
+		
+		
+		Limpiar Pantalla
+		Escribir " MENU PRINCIPAL DE EJERCICIOS"
+		Escribir " Bienvenido"
+		Escribir " opciones disponibles 1-30"
+		Escribir " (0) salir "
+		Escribir Sin Saltar " Elija una opcion (1-30)"
+		
+		leer opc 
+		
+		
+		Segun opc hacer
+			1: Escribir "ingrese el costo del producto"
+				leer costo
+				
+				Escribir "ingrese el dinerorecibido"
+				leer dinerorecibido
+				
+				Si dinerorecibido >= costo  Entonces
+					vuelto <- dinerorecibido - costo
+					Escribir "su  vuelto es de  $ " vuelto " gracias por su compra "
+				SiNo
+					Escribir "dinero insuficiente"
+				Fin Si
+				2:Escribir "conversor universal"
+					Escribir "1. convertir kilogramos a libras"
+					Escribir "2. convertir libras a kilogramos"
+					
+					Escribir "selecciones una opcion 1 o 2 "
+					leer eleccion 
+					
+					Si eleccion = 1 Entonces
+						Escribir "ingrese kilogramos"
+						leer kilogramos
+						
+						libras <- kilogramos * 2.20462
+						Escribir kilogramos  " kilogramos equivale a " libras " libras "
+					SiNo
+						Si eleccion = 2 Entonces
+							Escribir "ingrese libras"
+							leer libras
+							
+							kilogramos <- libras / 2.20462
+							Escribir libras  " libras  equivale a " kilogramos " kilogramos "
+							
+						SiNo
+							Escribir "eleccion incorrecta"
+						Fin Si
+						
+						
+						
+						
+						
+						
+					Fin Si
+					
+					3:Escribir " calculadora de descuentos"
+						Escribir "Ingrese el monto de la compra:"
+						Leer montoCompra
+						
+						// 
+						Si montoCompra < 50 Entonces
+							descuento <- 0
+						Sino
+							Si montoCompra >= 50 Y montoCompra < 100 Entonces
+								descuento <- 0.05
+							Sino
+								descuento <- 0.10
+							FinSi
+						FinSi
+						
+						// Calcular total con descuento
+						totalPagar <- montoCompra - (montoCompra * descuento)
+						
+						Escribir "Descuento aplicado: ", descuento * 100, "%"
+						Escribir "Total a pagar con descuento: $", totalPagar
+						
+			4:Escribir " calculo del iva "
+				Escribir "Ingrese el precio sin IVA:"
+				Leer precioSinIVA
+				
+				// Calcular IVA del 15%
+				iva <- precioSinIVA * 0.15
+				precioConIVA <- precioSinIVA + iva
+				
+				// Aplicar descuento del 30%
+				descuento <- precioConIVA * 0.30
+				precioFinal <- precioConIVA - descuento
+				
+				// Mostrar resultados
+				Escribir "IVA aplicado: $", iva
+				Escribir "Descuento aplicado: $", descuento
+				Escribir "Precio final a pagar: $", precioFinal
+				
+		5:Escribir " comparacion de precios entre producto"
+			escribir "ingrese precio producto1"
+			leer producto1
+			
+			Escribir "ingrese precio producto2"
+			leer producto2
+			
+			Si producto1 > producto2 Entonces
+				Escribir " producto1 es mayor que producto2 "
+			SiNo
+				Si  producto2 < producto1 Entonces
+					Escribir " producto1 es mayor que producto2 "
+				SiNo
+					Escribir " ambos productos tienen el mismo valor "
+				Fin Si
+			Fin Si
+			
+			6:Escribir " calificador de edad del cliente"
+				Escribir "ingrese su edad porfavor"
+				Leer edad
+				
+				Si edad >= 0 y edad <= 13 Entonces
+					Escribir edad " años " " eres menor de edad"
+				SiNo
+					Si edad >= 13 y edad <= 17  Entonces 
+						Escribir edad " años " " eres joven aun " 
+						
+					SiNo
+						Si edad >= 18 y edad <= 64  Entonces
+							Escribir edad " años " " ya eres adulto"
+						SiNo
+							Si edad >= 64 Entonces
+								Escribir  edad " años "  " ya eres adulto muuuuy mayor "
+								
+								
+							Fin Si
+						Fin Si
+					Fin Si
+				Fin Si
+				
+		7:Escribir " identificador de numero par o impar"
+			
+			Escribir " ingrese numero "
+			Leer numero
+			
+			Si numero mod 2 = 0  Entonces
+				Escribir " su numero es par"
+			SiNo
+				Escribir " su numero es impar" 
+			Fin Si
+			
+			multi10 = numero - (Trunc(numero / 10) * 10)
+			
+			Si multi10 = 0 Entonces
+				Escribir " y es multiplo de 10"
+			SiNo
+				Escribir  " y no es multiplo de 10 "
+			Fin Si
+			
+		8:Escribir " Evaluador de puntuacion de servicio"
+			Escribir " eliga una opcion del 1-10"
+			Escribir "ingrese puntuacion"
+			leer puntuacion
+			
+			Si puntuacion >= 1 y puntuacion <= 5 Entonces
+				Escribir  puntuacion " su puntuacion es mala"
+				
+				
+			SiNo
+				Si  puntuacion >= 6 y puntuacion <= 7 Entonces
+					Escribir puntuacion " su puntuacion es regular "
+				SiNo
+					Si  puntuacion >= 8 y puntuacion <= 10 Entonces
+						Escribir puntuacion " su puntuacion es buena"
+						
+					Fin Si
+				Fin Si
+			Fin Si	
+			
+		9:Escribir "verificador de multiplos de 3 ,9 y 12"
+			Escribir "ingrese numero"
+			leer numero
+			
+			Si numero mod 3 = 0 Entonces
+				Escribir " es multiplo de 3 " 
+			Fin Si
+			Si numero mod 9 = 0 Entonces
+				Escribir " es multiplo de 9 " 
+			Fin Si
+			Si numero mod 12 = 0 Entonces
+				Escribir " es multiplo de 12 " 
+				
+			Fin Si
+			
+			Si numero MOD 3 <> 0 Y numero MOD 9 <> 0 Y numero MOD 12 <> 0 Entonces
+				Escribir "No es múltiplo de 3, 9 ni 12."
+			Fin Si
+			
+		10:propina1 = 0.10
+			propina2 = 0.15
+			Escribir " calculadora de propina"
+				Escribir "ingrese valor de la cuenta"
+				leer valorcuenta
+				
+				Escribir " califique el servicio de 1 a 5 estrellas"
+				leer servicio
+				
+				Si servicio <= 3  Entonces
+					Escribir servicio " mal servicio  "
+					propina <- valorcuenta * propina1
+				SiNo
+					Si servicio  <= 5 Entonces
+						Escribir servicio " exelente servicio"
+						propina = valorcuenta * propina2 
+					SiNo
+						Escribir " nivel de servicio no valido"
+					Fin Si
+				Fin Si
+				totalapagar = valorcuenta + propina 
+				
+				Escribir " propina aplicada " propina
+				Escribir " total a pagar  "  totalapagar
+				
+			11: Escribir " clasificador de monto de compra"
+				Escribir " ingrese monto"
+				Leer monto
+				
+				Si monto <= 10 Entonces
+					Escribir " la compra es baja "
+				SiNo
+					Si monto >= 10 y monto <= 30  Entonces
+						Escribir " la compra tiene un nivel medio"
+						
+					SiNo
+						Si monto >= 30 Entonces
+							Escribir " la compra es altaaaaa"
+							
+							
+						Fin Si
+					Fin Si
+				Fin Si	
+				
+			12: Escribir "determinacion si un numero es positivo , mostrar el doble del numero y si es negativo conv a +"
+				Escribir " ingrese numero"
+				leer numero
+				
+				Si numero > 0 Entonces
+					resultado = numero * 2
+					Escribir  numero " es positivo y su doble es " resultado
+					
+				SiNo
+					Si numero < 0 Entonces
+						resultado = abs(numero)
+						Escribir numero " es negativo lo cual se lo convierte a "  resultado " positivo" 
+					SiNo
+						Escribir " su numero es neutro"
+					Fin Si
+				Fin Si	
+
+           13:Escribir " verificador de acceso por edad y dinero"
+			   Escribir "ingrese edad "
+			   Leer edad
+			   
+			   Escribir "ingrese dinero"
+			   leer dinero
+			   
+			   Si edad > 18 y dinero >= 1  Entonces
+				   Escribir " usted puede ingresar"
+			   SiNo
+				   Escribir " no puede ingresar"
+			   Fin Si
+		14:descespecial = 0.40
+			iva = 0.15
+			descuento2 = 0.05
+			descuento = 0
+			Escribir " descuento por edad y monto"
+			Escribir "ingrese edad "
+			Leer edad
+			
+			Escribir "ingrese monto"
+			Leer monto
+			
+			Si edad >= 60 y monto > 50 Entonces
+				descespecial = monto * descespecial
+				total = monto - descespecial
+				Escribir "si aplica al descuento especial "
+				Escribir " descuento especial aplicado " descespecial 
+				Escribir " total a pagar con descuento aplicado " total 
+			SiNo
+				Escribir " no tiene descespecial"
+				iva = monto * iva
+				monto = monto + iva
+				descuento = monto * descuento2
+				total = monto - descuento
+				Escribir " iva aplicado " iva 
+				Escribir  " descuento aplicado " descuento
+				Escribir "total a pagar" total
+			Fin Si	   
+			   
+		15: escribir " Cálculo de cambio exacto con billetes de $10 y $5"
+			Escribir "Ingrese el valor del vuelto:"
+			Leer vuelto
+			
+			// Validar que el vuelto sea múltiplo de 5
+			Si vuelto MOD 5 <> 0 Entonces
+				Escribir "El vuelto no puede darse con billetes de $10 y $5"
+			SiNo
+				// Calcular cantidad de billetes de $10
+				billetes10 <- Trunc(vuelto / 10)
+				
+				// Calcular lo que sobra después de los de $10
+				restante <- vuelto MOD 10
+				
+				// Calcular billetes de $5
+				billetes5 <- restante / 5
+				
+				// Mostrar resultado
+				Escribir "Se necesitan:"
+				Escribir billetes10, " billetes de $10"
+				Escribir billetes5, " billetes de $5"
+			Fin Si
+			
+			16:Escribir " categorizador de dias de la semana"
+				Escribir "Ingrese un número del 1 al 7:"
+				Leer num
+				
+				Si num < 1 O num > 7 Entonces
+					Escribir "Número incorrecto"
+				Sino
+					Si num = 1 Entonces
+						Escribir num, " es el día lunes"
+					SiNo
+						Si num = 2 Entonces
+							Escribir num, " es el día martes"
+						SiNo
+							Si num = 3 Entonces
+								Escribir num, " es el día miércoles"
+							SiNo
+								Si num = 4 Entonces
+									Escribir num, " es el día jueves"
+								SiNo
+									Si num = 5 Entonces
+										Escribir num, " es el día viernes"
+									SiNo
+										Si num = 6 Entonces
+											Escribir num, " es el día sábado"
+										SiNo
+											Escribir num, " es el día domingo"
+										FinSi
+									FinSi
+								FinSi
+							FinSi
+						FinSi
+					FinSi
+				FinSi
+				
+				17: Escribir "clasificador d producto unitario"
+					Escribir " ingrese precio"
+					leer precio
+					
+					Si precio < 50 Entonces
+						Escribir " el producto es economico" precio 
+					SiNo
+						Si precio <=100  Entonces
+							Escribir " el producto es regular " precio
+						SiNo
+							Escribir " el producto es caro " precio
+						Fin Si
+					Fin Si
+					
+					18:Escribir " determinador de año bisiesto"
+						Escribir "ingrese año"
+						Leer año
+						Si(año mod 4 = 0 Y año mod 100 <> 0) O (año mod 400 = 0)Entonces
+							Escribir  " si es un año bisiesto "
+							
+							
+						SiNo
+							Escribir " no es un año bisiesto" 
+						Fin Si
+						
+				19:Escribir " conversor de horas a minutos y segundos"
+					
+					Escribir " ingrese la hora"
+					leer hora
+					
+					minutos = hora * 60
+					segundos = hora * 3600
+					
+					Escribir hora " horas equivale a " minutos " minutos"
+					Escribir  hora " horas equivale a " segundos " segundos"	
+					
+				20:Escribir " verificador de triple de un numero "
+					
+					Escribir " ingrese el primer numero"
+					Leer  num1
+					
+					Escribir " ingrese el segundo numero "
+					Leer num2
+					
+					Si num2 = num1 * 3  Entonces
+						Escribir " el segundo numero es el triple del primero"
+						
+					SiNo
+						Escribir  " el segundo numero no es triple del primero"
+					Fin Si	
+				21:	Escribir " determinador de riesgo por sintomas"
+					Escribir " ¿tiene fiebre ?(si/no)"
+					leer fiebre
+					
+					Escribir " ¿tiene dificultad para respirar? (si/no) "
+					Leer respirar
+					
+					Escribir " ¿ tiene dolor de pecho? (si/no)"
+					Leer pecho
+					
+					Si fiebre = ("si") y respirar = ("si") y pecho = ("si") Entonces
+						Escribir " Altoo riesgo derivar a urgencias"
+					SiNo
+						Si fiebre = ("no") y respirar = ("si") y pecho = ("si") Entonces
+							Escribir "riesgo medio "
+						SiNo
+							Si fiebre = ("si") y respirar = ("no") y pecho = ("no") Entonces
+								Escribir " riesgo bajo "
+							SiNo
+								Si fiebre = ("no") y respirar = ("no") y pecho = ("si") Entonces
+									Escribir " riesgo bajo"
+								SiNo
+									Si fiebre = ("no") y respirar = ("no") y pecho = ("no") Entonces
+										Escribir " usted esta sano "
+									SiNo
+										Si fiebre = ("no") y respirar = ("si") y pecho = ("no") Entonces
+											Escribir " riesgo bajo"
+										SiNo
+											Si fiebre = ("si") y respirar = ("si") y pecho = ("no") Entonces
+												Escribir "riesgo medio "
+											SiNo
+												Si fiebre = ("si") y respirar = ("no") y pecho = ("si")  Entonces
+													Escribir "riesgo medio "
+													
+													
+												Fin Si
+											Fin Si
+										Fin Si
+									Fin Si
+								Fin Si
+							Fin Si
+						Fin Si
+					Fin Si
+			22:Escribir "identificar el estado de salud de los clientes que se toman la presión arteria"
+				
+				Escribir " Ingrese su presion sistolica"
+				Leer presion
+				
+				Si presion < 90 Entonces
+					Escribir " su presion es baja"
+				SiNo
+					Si presion >= 90 y  presion <= 120  Entonces
+						Escribir " Su presion es normal "
+						
+					SiNo
+						Si presion >= 121 y  presion <= 139 Entonces
+							Escribir " Tiene prehipertension"
+							
+						SiNo
+							Si presion >= 140 Entonces
+								Escribir " Usted tiene hipertension"
+								
+								
+							Fin Si
+						Fin Si
+					Fin Si
+				Fin Si	
+				
+				23:Escribir "mostrar saludo personalizado"
+					
+					Escribir " ingrese su nombre"
+					Leer nombre
+					
+					Escribir " hola " nombre " bienvenido al club "
+					
+		24:Escribir "Detectar si el carácter ingresado es una vocal"
+			
+			Escribir " ingrese una letra"
+			Leer letra
+			
+			letra = Minusculas(letra)
+			
+			Si letra = ("a") o letra = ("e") o letra = (i) o letra = ("o") o letra = ("u")  Entonces
+				Escribir letra " es una vocal "
+			SiNo
+				Escribir " no es una vocal"
+			Fin Si		
+			
+			25:Escribir "Detectar si el carácter ingresado es una consonante"
+				
+				Escribir " ingrese letra"
+				Leer letra
+				
+				letra =  Minusculas(letra)
+				
+				
+				Si letra <> ("a") y  letra <> ("e") y letra <> ("i") y letra <> ("o") y letra <> ("u") Entonces
+					Escribir letra " es una consonante"
+					
+				SiNo
+					Escribir letra " es una vocal "
+				Fin Si
+				
+		26:Escribir "Comparar si dos nombres ingresados son iguales"
+			
+			Escribir " ingrese primer nombre"
+			leer nombre1
+			
+			Escribir " ingrese segundo nombre "
+			Leer nombre2
+			
+			
+			Si nombre1 = nombre2 Entonces
+				Escribir " los nombres son iguales"
+				
+			SiNo
+				Escribir " los nombres no son iguales "
+			Fin Si
+			
+			27:Escribir "Verificar si una letra es mayúscula o minúscula"
+				
+				Escribir " ingrese una letra"
+				Leer letra
+				
+				
+				Si letra = Mayusculas(letra) Entonces
+					Escribir letra " es Mayusculas"
+				SiNo
+					Escribir letra " es Minusculas"
+				Fin Si
+				
+		28:Escribir "Mostrar nombre completo del cliente"
+			Escribir " ingrese su nombre"
+			leer nombre
+			
+			Escribir " ingrese su apellido"
+			leer apellido
+			
+			nombrecompletos = nombre +  " "  + apellido
+			
+			Escribir " Bienvenido " nombrecompletos	
+			29:Escribir "Verificar si una palabra es corta o larga"
+				
+				Escribir " ingrese una palabra "
+				leer palabra
+				
+				Si Longitud(palabra)  > 6 Entonces
+					Escribir " la palabra es larga"
+				SiNo
+					Escribir " la palabra es corta "
+					
+				Fin Si
+			30:Escribir "Contarlos caracteres y convertir a mayúsculas cualquier frase" 
+				
+				Escribir  " ingrese una frase"
+				leer frase
+				
+				frase = Mayusculas(frase)
+				
+				cantidadcaracter = Longitud(frase)
+				
+				Escribir frase " tiene " cantidadcaracter " caracteres"	
+		FinSegun
+		Escribir " presione enter para continuar "
+		Esperar Tecla
+		
+	
+		
+	Hasta Que opc = 0 
+	
+FinAlgoritmo
+
+
+
+
