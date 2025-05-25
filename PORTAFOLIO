@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI PORTAFOLIO</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Estilos para el encabezado */
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 0;
+        }
+
+        /* Estilos para la sección de contenido */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            color: #330c43;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            line-height: 1.6;
+        }
+        
+        nav {
+            background-color: #235f93;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: rgb(19, 54, 64);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        /* Estilos para la lista de redes sociales */
+        .social-links {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-links li {
+            margin: 0 10px;
+        }
+
+        .social-links a {
+            color: #2980b9;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .social-links a:hover {
+            color: #2e2f47;
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>David Isaias Avilés Bajaña</h1>
+        <p>Desarrollador Web | Estudiante | Principiante</p>
+        <img src="Une.jpg" width="150px" > 
+    </header>
+
+   <nav> 
+    <a href="#about">Sobre mí</a> 
+    <a href="#projects">Proyectos</a> 
+    <a href="#contact">Contacto</a> 
+    <a href="social-links">Redes Sociales</a> 
+  </nav> 
+    <div class="container">
+        <div class="section">
+            <h2>Sobre mí</h2>
+            <p>Soy una desarrollador web, el cual le gusta mucho crear sitios web totalmente modernos y funcionales. Me especializo en HTML, CSS, Javascript. Actualmente, soy estudiante de Ingeniería en Software en la Universidad Estatal de Milagro.</p>
+        </div>
+
+        <div class="section">
+            <h2>Proyectos</h2>
+            <h3>Aplicación de Gestión de Tareas</h3>
+            <p>Desarrollo de una aplicación web para la gestión de tareas, utilizando tecnologías como React, Redux y Firebase.</p>
+
+            <h3>Juego de Tetris</h3>
+            <p>Creación de un juego de Tetris clásico, implementado en HTML, CSS y JavaScript.</p>
+        </div>
+
+        <div class="section">
+            <h2>Contacto</h2>
+            <p>Email: david_aviles2004@outlook.com</p>
+            <p>Teléfono: 099-352-9741</p>
+        </div>
+
+        <div class="section">
+            <h2>Redes Sociales</h2>
+            <ul class="social-links">
+                 <li><a href="https://www.facebook.com/david.aviles.148">Facebook</a></li>
+                <li><a href="https://www.instagram.com/avilesdavid_/">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 David Aviles Bajaña. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
