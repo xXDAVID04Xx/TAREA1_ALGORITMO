@@ -1,0 +1,40 @@
+body {
+font-family: Arial, sans-serif;
+background-color: #eef;
+padding: 30px;
+text-align: center;
+}
+
+input, button {
+padding: 10px;
+font-size: 16px;
+margin: 10px;
+}
+
+button {
+background-color: #28a745;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #218838;
+}
+
+#resultado {
+margin-top: 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+}
+
+.divisor {
+background-color: white;
+padding: 10px 15px;
+border-radius: 8px;
+border: 1px solid #aaa;
+font-size: 18px;
+}

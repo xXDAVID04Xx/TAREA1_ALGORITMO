@@ -1,0 +1,131 @@
+/* Fuente general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fdf6fd, #e0f7fa);
+    color: #444;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título */
+h1 {
+    font-size: 2.5rem;
+    color: #7e57c2;
+    margin: 1.5rem;
+    animation: slideFadeIn 1s ease-in-out;
+}
+
+/* Contenedor del formulario */
+form {
+    background-color: #ffffffdd;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    animation: fadeInUp 1s ease;
+}
+
+/* Campos de entrada */
+.numeroPar {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.3rem;
+    color: #6a1b9a;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    padding: 0.5rem;
+    border: 2px solid #ce93d8;
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    background-color: #f3e5f5;
+}
+
+input[type="number"]:focus {
+    border-color: #ab47bc;
+    background-color: #e1bee7;
+}
+
+/* Botones */
+.button {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+button {
+    flex: 1;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="button"] {
+    background-color: #ba68c8;
+    color: white;
+}
+
+button[type="button"]:hover {
+    background-color: #9c27b0;
+}
+
+button[type="reset"] {
+    background-color: #ffe082;
+    color: #5d4037;
+}
+
+button[type="reset"]:hover {
+    background-color: #ffca28;
+}
+
+/* Resultados */
+#resultado\ 1,
+#resultado\ 2 {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f1f8e9;
+    border-left: 5px solid #aed581;
+    border-radius: 10px;
+    font-size: 1rem;
+    display: none; /* aparecerá con JS */
+}
+
+/* Animaciones */
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

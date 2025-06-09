@@ -1,0 +1,116 @@
+/* Estilo general */
+body {
+    background: linear-gradient(135deg, #f0e6d2, #d9cbb7);
+    font-family: 'Georgia', serif;
+    color: #5b4636;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Contenedor del formulario */
+form {
+    background-color: #f9f5ec;
+    border: 3px solid #b8996e;
+    border-radius: 15px;
+    padding: 2rem 3rem;
+    box-shadow: 0 0 15px 3px #d8c9a3cc;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Título principal */
+h1 {
+    font-family: 'Goudy Old Style', 'Georgia', serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    text-align: center;
+    color: #7c6651;
+    margin: 50px;
+    text-shadow: 1px 1px 1px #c9b899;
+    border: solid;
+    padding: 25px;
+    background-color: #fef9f1;
+}
+
+/* Etiquetas */
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #856c50;
+    font-size: 1.1rem;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 2px solid #cbbf9e;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Georgia', serif;
+    background-color: #fef9f1;
+    color: #5b4636;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #a9926e;
+    box-shadow: 0 0 8px 2px #bba869aa;
+}
+
+/* Resultado */
+#resultado {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #e9dfc6;
+    border: 2px solid #b7a67e;
+    border-radius: 10px;
+    color: #6f604b;
+    font-family: 'Palatino Linotype', serif;
+    font-size: 1.1rem;
+    text-align: center;
+    min-height: 3rem;
+    box-shadow: inset 0 0 8px #d9cbb7aa;
+}
+
+/* Botones */
+.button {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    background: linear-gradient(145deg, #cbbf9e, #a9926e);
+    border: 2px solid #8c7a53;
+    border-radius: 12px;
+    color: #f7f1e3;
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    padding: 0.6rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #7a6a4dcc;
+    transition: background 0.3s ease, color 0.3s ease;
+    user-select: none;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #a4926e, #cbbf9e);
+    color: #5b4636;
+    box-shadow: 2px 2px 10px #cbbf9e;
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: inset 2px 2px 6px #7a6a4dcc;
+}

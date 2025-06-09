@@ -1,0 +1,40 @@
+body {
+font-family: Arial, sans-serif;
+background-color: #f0f4f8;
+padding: 40px;
+text-align: center;
+}
+
+input, button {
+padding: 10px;
+font-size: 16px;
+margin: 10px;
+}
+
+button {
+background-color: #007bff;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #0056b3;
+}
+
+#resultado {
+margin-top: 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+}
+
+.numero {
+background-color: #fff;
+border: 1px solid #ccc;
+padding: 10px 15px;
+border-radius: 8px;
+font-size: 18px;
+}
