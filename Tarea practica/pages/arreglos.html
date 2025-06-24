@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos</title>
+</head>
+<body>
+    <script>
+        function arreglo(){
+            debugger
+            let numeros = [];
+            numeros[0] = 10;
+            numeros[1] = 20;    
+            numeros[2] = 30;
+            numeros[3] = 40;    
+            numeros[4] = 50;
+            numeros.push(60); // Agrega un elemento al final del arreglo
+            document.write("Arreglo: " + numeros.join(" | ") + "<br>");
+            let nombres = ["Ana", "Jose", "Dan","Miguel","Pedro","Maria"];
+            let ind=0
+            nombres[6]="Juan";
+            nombres[nombres.length]="Yady";
+            while (ind < nombres.length) {
+                if (nombres[ind] !== "Dan"){
+                    document.write(nombres[ind]+"<br>")
+                }
+                ind=ind+1
+            }
+            for (let i = 0; i < numeros.length; i++) {
+                document.write(numeros[i] + "<br>");
+            }   
+            // alert("Arreglo: " + numeros.join(" | "));
+            // document.write(numeros);
+            // document.write("<br>");
+            // document.write("Tamaño del arreglo: " + numeros.length + "<br>");
+            // document.write("Primer elemento: " + numeros[0] + "<br>");  
+            // document.write("Primer elemento: " + numeros[1] + "<br>");  
+            // document.write("Primer elemento: " + numeros[2] + "<br>");  
+            // document.write("Primer elemento: " + numeros[3] + "<br>");  
+            // document.write("Primer elemento: " + numeros[4] + "<br>");  
+        
+        }
+        arreglo();
+    </script>
+</body>
+</html>

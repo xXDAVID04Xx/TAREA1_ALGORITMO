@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ejercicio 13 - Contar Vocales</title>
+    <link rel="stylesheet" href="/css/Ejercicio_13_ContarVocales.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Versión 1: Palabra fija</h2>
+        <p>Palabra: <strong>murciélago</strong></p>
+        <button onclick="contarVocalesFijo()">Contar vocales</button>
+        <div id="resultadoFijo"></div>
+    </div>
+
+    <div class="container">
+    <h2>Versión 2: Palabra ingresada</h2>
+        <input type="text" id="inputPalabra" placeholder="Escribe una palabra" />
+        <button onclick="contarVocalesInput()">Contar vocales</button>
+        <div id="resultadoInput"></div>
+    </div>
+
+    <script src="/js/Ejercicio_13_ContarVocales.js"></script>
+</body>
+</html>
