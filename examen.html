@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Guía Práctica Experimental N°2</title>
+</head>
+<body>
+  <h2>Bloque 1: Arreglos de Objetos</h2>
+  <div id="salida"></div>
+
+  <script>
+    // --- Bloque 1: Arreglos de Objetos ---
+    let libros = [
+      { titulo: "Cien años de soledad", autor: "G. García Márquez", año: 1967 },
+      { titulo: "Don Quijote", autor: "Miguel de Cervantes", año: 1605 },
+      { titulo: "El Principito", autor: "Antoine de Saint-Exupéry", año: 1943 },
+      { titulo: "Harry Potter", autor: "J.K. Rowling", año: 2001 },
+      { titulo: "Los Juegos del Hambre", autor: "Suzanne Collins", año: 2008 }
+    ];
+
+    document.write("<h3>1. Lista completa de libros</h3>");
+    for (let i = 0; i < libros.length; i++) {
+      document.write(`${i+1}. ${libros[i].titulo} - ${libros[i].autor} (${libros[i].año})<br>`);
+    }
+
+    // 2. Buscar libro por título
+    let buscar = prompt("Ingrese el título del libro que desea buscar:");
+    let encontrado = false;
+    for (let i = 0; i < libros.length; i++) {
+      if (libros[i].titulo.toLowerCase() === buscar.toLowerCase()) {
+        encontrado = true;
+        document.write(`<h3>2. Libro encontrado:</h3>${libros[i].titulo} - ${libros[i].autor} (${libros[i].año})<br>`);
+        break;
+      }
+    }
+    if (!encontrado) document.write("<h3>2. Libro no encontrado.</h3>");
+
+    // 3. Contar libros después del 2000
+    let contador = 0;
+    for (let i = 0; i < libros.length; i++) {
+      if (libros[i].año > 2000) contador++;
+    }
+    document.write(`<h3>3. Libros publicados después del año 2000:</h3>${contador}<br>`);
+
+    // 4. Concatenar títulos
+    let cadena = "";
+    for (let i = 0; i < libros.length; i++) {
+      cadena += libros[i].titulo;
+      if (i < libros.length - 1) cadena += " – ";
+    }
+    document.write(`<h3>4. Títulos concatenados:</h3>${cadena}<br>`);
+
+    // 5. Actualizar año de publicación
+    let tituloActualizar = prompt("Ingrese el título del libro a actualizar:");
+    let nuevoAño = parseInt(prompt("Ingrese el nuevo año:"));
+    let actualizado = false;
+    for (let i = 0; i < libros.length; i++) {
+      if (libros[i].titulo.toLowerCase() === tituloActualizar.toLowerCase()) {
+        libros[i].año = nuevoAño;
+        actualizado = true;
+        document.write(`<h3>5. Año actualizado:</h3>${libros[i].titulo} - ${libros[i].año}<br>`);
+        break;
+      }
+    }
+    if (!actualizado) document.write("<h3>5. Libro no encontrado para actualizar.</h3>");
+
+    // --- Bloque 2: Pila de Objetos ---
+    document.write("<h2>Bloque 2: Pila de Libros</h2>");
+    let pila = [];
+
+    // 6. Agregar libros (push)
+    for (let i = 1; i <= 3; i++) {
+      let titulo = prompt(`Ingrese el título del libro ${i}:`);
+      let autor = prompt(`Ingrese el autor del libro ${i}:`);
+      let año = parseInt(prompt(`Ingrese el año del libro ${i}:`));
+      pila.push({ titulo, autor, año });
+    }
+    document.write("<h3>6. Pila con 3 libros:</h3>");
+    for (let i = pila.length - 1; i >= 0; i--) {
+      document.write(`${pila[i].titulo} (${pila[i].año})<br>`);
+    }
+
+    // 7. Eliminar último libro (pop)
+    if (pila.length > 0) {
+      let eliminado = pila.pop();
+      document.write(`<h3>7. Libro eliminado con pop():</h3>${eliminado.titulo}<br>`);
+    }
+
+    // 8. Ver el libro en la cima (peek)
+    if (pila.length > 0) {
+      let cima = pila[pila.length - 1];
+      document.write(`<h3>8. Libro en la cima:</h3>${cima.titulo}<br>`);
+    }
+
+    // 9. Verificar si la pila está vacía (isEmpty)
+    if (pila.length === 0) {
+      document.write("<h3>9. La pila está vacía.</h3>");
+    } else {
+      document.write(`<h3>9. La pila tiene ${pila.length} libros.</h3>`);
+    }
+
+    // 10. Vaciar la pila
+    while (pila.length > 0) {
+      pila.pop();
+    }
+    document.write("<h3>10. La pila se ha vaciado completamente.</h3>");
+  </script>
+</body>
+</html>
